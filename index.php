@@ -46,7 +46,7 @@ if (isset($_POST['name'])){
             <label for="qantity">Quantité</label>
             <select name="qantity" id="qantity">
                 <?php for ($i=1; $i < 6; $i++) { 
-                    if (isset($_POST['qantity']) == $i) { 
+                    if (isset($_POST['qantity']) && $_POST['qantity'] == $i) { 
                         echo "<option value='$i' selected>$i</option>";
                     } else {
                         echo "<option value='$i'>$i</option>";
@@ -57,13 +57,9 @@ if (isset($_POST['name'])){
 
             <label for="currency">Devise</label>
             <select name="currency" id="currency">
-                <?php foreach ($allDevise as $currency) {
-                    if (isset($_POST['currency']) == $currency) { 
-                        echo "<option value='$currency' selected>$currency</option>";
-                    } else {
-                        echo "<option value='$currency'>$currency</option>";
-                    }
-                } ?>
+                <option value='EUR'>EUR</option>
+                <option value='USD'>USD</option>
+                <option value='YEN'>YEN</option>
             </select>
         </div>
 
@@ -77,7 +73,7 @@ if (isset($_POST['name'])){
             <label for="qantity2">Quantité</label>
             <select name="qantity2" id="qantity2">
                 <?php for ($i=1; $i < 6; $i++) { 
-                    if (isset($_POST['qantity2']) == $i) { 
+                    if (isset($_POST['qantity2']) && $_POST['qantity2'] == $i) { 
                         echo "<option value='$i' selected>$i</option>";
                     } else {
                         echo "<option value='$i'>$i</option>";
@@ -88,13 +84,9 @@ if (isset($_POST['name'])){
 
             <label for="currency2">Devise</label>
             <select name="currency2" id="currency2">
-                <?php foreach ($allDevise as $currency) {
-                    if (isset($_POST['currency2']) == $currency) { 
-                        echo "<option value='$currency' selected>$currency</option>";
-                    } else {
-                        echo "<option value='$currency'>$currency</option>";
-                    }
-                } ?>
+            <option value='EUR'>EUR</option>
+                <option value='USD'>USD</option>
+                <option value='YEN'>YEN</option>
             </select>
         </div>
 
@@ -108,7 +100,7 @@ if (isset($_POST['name'])){
             <label for="qantity3">Quantité</label>
             <select name="qantity3" id="qantity3">
                 <?php for ($i=1; $i < 6; $i++) { 
-                    if (isset($_POST['qantity3']) == $i) { 
+                    if (isset($_POST['qantity3']) && $_POST['qantity3'] == $i) { 
                         echo "<option value='$i' selected>$i</option>";
                     } else {
                         echo "<option value='$i'>$i</option>";
@@ -119,25 +111,17 @@ if (isset($_POST['name'])){
 
             <label for="currency3">Devise</label>
             <select name="currency3" id="currency3">
-                <?php foreach ($allDevise as $currency) {
-                    if (isset($_POST['currency3']) == $currency) { 
-                        echo "<option value='$currency' selected>$currency</option>";
-                    } else {
-                        echo "<option value='$currency'>$currency</option>";
-                    }
-                } ?>
+            <option value='EUR'>EUR</option>
+                <option value='USD'>USD</option>
+                <option value='YEN'>YEN</option>
             </select>
         </div>
         <div>
             <label for="currencyTotal">Devise pour le total</label>
             <select name="currencyTotal" id="currencyTotal">
-                <?php foreach ($allDevise as $currency) {
-                    if (isset($_POST['currencyTotal']) == $currency) { 
-                        echo "<option value='$currency' selected>$currency</option>";
-                    } else {
-                        echo "<option value='$currency'>$currency</option>";
-                    }
-                } ?>
+            <option value='EUR'>EUR</option>
+                <option value='USD'>USD</option>
+                <option value='YEN'>YEN</option>
             </select>
         </div>
         
